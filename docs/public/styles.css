@@ -1,0 +1,131 @@
+:root {
+  --light-border: #e2e2e3;
+  --dark-border: #2e2e32;
+  --light-border-hover: #3451b2;
+  --dark-border-hover: #a8b1ff;
+  --light-description: #67676c;
+  --dark-description: #98989f;
+  --light-title: #3451b2;
+  --dark-title: #a8b1ff;
+}
+
+@font-face {
+  font-family: "cassol";
+  src: url("/gotham.otf") format("opentype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "cassol";
+}
+
+.wrapper .container .title div a span {
+  font-family: "cassol";
+}
+
+@media (min-width: 640px) {
+  .button-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 8px;
+  }
+}
+
+.button-list {
+  padding-top: 24px;
+  display: grid;
+  grid-row-gap: 8px;
+}
+
+.button {
+  user-select: none;
+  display: block;
+  border: 1px solid var(--light-border);
+  border-radius: 8px;
+  padding: 11px 16px 13px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+html.dark .button {
+  border: 1px solid var(--dark-border);
+}
+
+.button:hover {
+  border-color: var(--light-border-hover);
+}
+
+html.dark .button:hover {
+  border-color: var(--dark-border-hover);
+}
+
+.description {
+  pointer-events: none !important;
+  display: block;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--light-description);
+}
+
+html.dark .description {
+  color: var(--dark-description);
+}
+
+.title-text {
+  pointer-events: none !important;
+  display: block;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--light-title);
+}
+
+html.dark .title-text {
+  color: var(--dark-title);
+}
+
+.link-button {
+  text-decoration: none !important;
+}
+
+.text-left {
+  margin-right: auto;
+  text-align: left;
+}
+
+.text-center {
+  margin: 0px auto;
+  text-align: center;
+}
+
+.text-right {
+  margin-left: auto;
+  text-align: right;
+}
+
+details {
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--dark-border);
+  text-align: center;
+}
+
+details summary {
+  cursor: pointer;
+  font-family: "cassol";
+  font-size: 1.17em;
+}
+
+details p span {
+  font-weight: bold;
+  margin-right: 25px;
+}
