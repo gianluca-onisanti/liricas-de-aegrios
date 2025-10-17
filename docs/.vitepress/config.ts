@@ -28,24 +28,42 @@ const sidebar = [
     collapsed: true,
     items: [
       { text: "Início", link: "/" },
-      { text: "Visão Geral", link: "/overview" },
-      { text: "Perguntas Frequentes (FAQ)", link: "/faq" },
+      { text: "Hall dos Heróis", link: "/faq" },
     ],
   },
   {
-    text: "Datasol: o App Cassol",
+    text: "Histórias e Rapsódias",
     collapsed: true,
     items: [
-      { text: "Introdução", link: "/datasol/" },
-      { text: "Funcionalidades", link: "/datasol/functionalities" },
-    ],
-  },
-  {
-    text: "Snowflake",
-    collapsed: true,
-    items: [
-      { text: "Introdução", link: "/snowflake/" },
-      { text: "Fontes de Dados", link: "/snowflake/data_sources" },
+      {
+        text: "Países",
+        collapsed: false,
+        items: [
+          {
+            text: "Calavera",
+            link: "/histories_rhapsodies/countries/calavera",
+          },
+          { text: "Trivora", link: "/histories_rhapsodies/countries/trivora" },
+          {
+            text: "República Museana",
+            link: "/histories_rhapsodies/countries/rep_musa",
+          },
+        ],
+      },
+      {
+        text: "Figuras Históricas",
+        collapsed: false,
+        items: [
+          {
+            text: "O Apocalipse de Thánavros",
+            link: "/histories_rhapsodies/historical_figures/",
+          },
+          {
+            text: "A Dinastia Fordragon",
+            link: "/histories_rhapsodies/historical_figures/fordragon_dinasty",
+          },
+        ],
+      },
     ],
   },
 ];
@@ -59,7 +77,7 @@ const nav = [
 
 export default defineConfig({
   lang: "pt-BR",
-  title: "Datasol Docs",
+  title: "As Líricas de Aegrios",
   description: "A Documentação Oficial do Datasol.",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico", sizes: "175x175" }],
@@ -74,8 +92,8 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/datasol-devteam",
-        ariaLabel: "Github do Time Datasol",
+        link: "https://github.com/gianluca-onisanti",
+        ariaLabel: "Github do Mestre",
       },
     ],
     footer: {

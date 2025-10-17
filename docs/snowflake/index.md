@@ -1,1 +1,0 @@
-# Snowflake: Dados & Business Intelligence
